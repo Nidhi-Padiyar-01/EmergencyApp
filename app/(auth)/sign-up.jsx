@@ -38,7 +38,7 @@ const SignUp = () => {
   };
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView style={{ backgroundColor: "#fff", flex: 1 }}>
       <ScrollView>
         <View
           className="w-full flex justify-center h-full px-4 my-6"
@@ -50,10 +50,10 @@ const SignUp = () => {
             source={images.logo}
             resizeMode="contain"
             className="w-[115px] h-[34px]"
-          />
-
-          <Text className="text-2xl font-semibold text-white mt-10 font-psemibold">
-            Sign Up to Aora
+          /><Text>RescueMe</Text>
+          
+          <Text className="text-2xl font-semibold text-black mt-10 font-psemibold">
+            Sign Up to RescueMe
           </Text>
 
           <FormField
@@ -80,13 +80,14 @@ const SignUp = () => {
 
           <CustomButton
             title="Sign Up"
+
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
           />
 
           <View className="flex justify-center pt-5 flex-row gap-2">
-            <Text className="text-lg text-gray-100 font-pregular">
+            <Text className="text-lg text-gray-600 font-pregular">
               Have an account already?
             </Text>
             <Link

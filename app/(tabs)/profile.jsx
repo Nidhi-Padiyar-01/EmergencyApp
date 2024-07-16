@@ -7,10 +7,11 @@ import useAppwrite from "../../lib/useAppwrite";
 import { getUserPosts, signOut } from "../../lib/appwrite";
 import { useGlobalContext } from "../../context/GlobalProvider";
 import { EmptyState, InfoBox, VideoCard } from "../../components";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Profile = () => {
   const { user, setUser, setIsLogged } = useGlobalContext();
-  const { data: posts } = useAppwrite(() => getUserPosts(user.$id));
+  const { data: contact_number } = useAppwrite(() => getUserPosts(user.$id));
 
   const logout = async () => {
     await signOut();
@@ -21,23 +22,23 @@ const Profile = () => {
   };
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView style={{backgroundColor:"gray"}}className="h-full">
       <FlatList
-        data={posts}
+        data={contact_number}
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => (
           <VideoCard
             title={item.title}
-            thumbnail={item.thumbnail}
-            video={item.video}
+            contact_number={item.contact_number}
+            // video={item.video}
             creator={item.creator.username}
             avatar={item.creator.avatar}
           />
         )}
         ListEmptyComponent={() => (
           <EmptyState
-            title="No Videos Found"
-            subtitle="No videos found for this profile"
+            // title="No contacts Found"
+            subtitle="Save the contacts in this profile"
           />
         )}
         ListHeaderComponent={() => (
@@ -46,39 +47,39 @@ const Profile = () => {
               onPress={logout}
               className="flex w-full items-end mb-10"
             >
-              <Image
+              <Image 
                 source={icons.logout}
                 resizeMode="contain"
                 className="w-6 h-6"
               />
             </TouchableOpacity>
 
-            <View className="w-16 h-16 border border-secondary rounded-lg flex justify-center items-center">
-              <Image
+            <View className="w-16 h-16 border rounded-lg flex justify-center items-center">
+              <Image style={{backgroundColor:"#fff"}}
                 source={{ uri: user?.avatar }}
                 className="w-[90%] h-[90%] rounded-lg"
                 resizeMode="cover"
               />
             </View>
 
-            <InfoBox
+             <InfoBox 
               title={user?.username}
               containerStyles="mt-5"
               titleStyles="text-lg"
             />
 
-            <View className="mt-5 flex flex-row">
-              <InfoBox
-                title={posts.length || 0}
-                subtitle="Posts"
+            <View className="mt-8 flex flex-row">
+              <InfoBox style={{ba:"black"}}
+                title={contact_number.length || 0}
+                subtitle="Contacts saved"
                 titleStyles="text-xl"
-                containerStyles="mr-10"
+                containerStyles="mr-1"
               />
-              <InfoBox
+              {/* <InfoBox
                 title="1.2k"
                 subtitle="Followers"
                 titleStyles="text-xl"
-              />
+              /> */}
             </View>
           </View>
         )}

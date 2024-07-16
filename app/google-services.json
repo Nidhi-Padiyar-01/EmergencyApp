@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631026602125",
+    "project_id": "react-native-dream-c7203",
+    "storage_bucket": "react-native-dream-c7203.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631026602125:android:1dbb79168a4ab6ec8052c4",
+        "android_client_info": {
+          "package_name": "com.reactnativedream"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBixxhb5Y9QiPw1MIdNlElLxACRD-xLZLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

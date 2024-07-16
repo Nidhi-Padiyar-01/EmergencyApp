@@ -75,8 +75,8 @@ const TrendingItem = ({ activeItem, item }) => {
   );
 };
 
-const Trending = ({ posts }) => {
-  const [activeItem, setActiveItem] = useState(posts[0]);
+const Trending = ({ contact_number }) => {
+  const [activeItem, setActiveItem] = useState(contact_number[0]);
 
   const viewableItemsChanged = ({ viewableItems }) => {
     if (viewableItems.length > 0) {
@@ -86,7 +86,7 @@ const Trending = ({ posts }) => {
 
   return (
     <FlatList
-      data={posts}
+      data={contact_number}
       horizontal
       keyExtractor={(item) => item.$id}
       renderItem={({ item }) => (
