@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text, ScrollView, Dimensions, Alert, Image, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  Dimensions,
+  Alert,
+  Image,
+  StyleSheet,
+} from "react-native";
 
 import { images } from "../../constants";
 import { CustomButton, FormField } from "../../components";
@@ -52,11 +60,10 @@ const SignIn = () => {
             source={images.logo}
             resizeMode="contain"
             style={styles.logo}
-          /><Text>RescueMe</Text>
+          />
+          <Text>aora</Text>
 
-          <Text style={styles.title}>
-            Log in to RescueMe
-          </Text>
+          <Text style={styles.title}>Log in to aora</Text>
 
           <FormField
             title="Email"
@@ -81,13 +88,8 @@ const SignIn = () => {
           />
 
           <View style={styles.footer}>
-            <Text style={styles.footerText}>
-              Don't have an account?
-            </Text>
-            <Link
-              href="/sign-up"
-              style={styles.footerLink}
-            >
+            <Text style={styles.footerText}>Don't have an account?</Text>
+            <Link href="/sign-up" style={styles.footerLink}>
               Signup
             </Link>
           </View>
@@ -99,12 +101,12 @@ const SignIn = () => {
 
 const styles = StyleSheet.create({
   safeArea: {
-    backgroundColor: '#fff', // White background color
+    backgroundColor: "#fff", // White background color
     flex: 1,
   },
   container: {
-    width: '100%',
-    justifyContent: 'center',
+    width: "100%",
+    justifyContent: "center",
     paddingHorizontal: 16,
     paddingVertical: 24,
   },
@@ -114,10 +116,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#000',
+    fontWeight: "bold",
+    color: "#000",
     marginTop: 40,
-    textAlign: 'center',
+    textAlign: "center",
   },
   inputMarginTop: {
     marginTop: 10,
@@ -131,18 +133,18 @@ const styles = StyleSheet.create({
 
   // },
   footer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
     paddingTop: 20,
   },
   footerText: {
     fontSize: 16,
-    color: '#7B7B8B',
+    color: "#7B7B8B",
   },
   footerLink: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#0000FF', // Blue color for the link
+    fontWeight: "bold",
+    color: "#0000FF", // Blue color for the link
     marginLeft: 5,
   },
 });

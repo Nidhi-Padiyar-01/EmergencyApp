@@ -50,10 +50,11 @@ const SignUp = () => {
             source={images.logo}
             resizeMode="contain"
             className="w-[115px] h-[34px]"
-          /><Text>RescueMe</Text>
-          
+          />
+          <Text>aora</Text>
+
           <Text className="text-2xl font-semibold text-black mt-10 font-psemibold">
-            Sign Up to RescueMe
+            Sign Up to aora
           </Text>
 
           <FormField
@@ -80,7 +81,6 @@ const SignUp = () => {
 
           <CustomButton
             title="Sign Up"
-
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}

@@ -7,10 +7,12 @@ import FormField from "./FormField";
 import CustomButton from "./CustomButton";
 import InfoBox from "./InfoBox";
 import Loader from "./Loader";
-import Accident from "./Accident";
-import Breathlessness from "./Breathlessness";
-import Chestpain from "./Chestpain";
-import Unconsciousness from "./Unconsciousness";
+// import Accident from "./Accident";
+// import Breathlessness from "./Breathlessness";
+// import Chestpain from "./Chestpain";
+// import Unconsciousness from "./Unconsciousness";
+import profile from "../app/(tabs)/profile";
+import Details from "../app/(tabs)/Details";
 
 const Stack = createNativeStackNavigator();
 export default function index() {
@@ -21,6 +23,8 @@ export default function index() {
         <Stack.Screen name="Breathlessness" component={Breathlessness} />
         <Stack.Screen name="Chestpain" component={Chestpain} />
         <Stack.Screen name="Unconsciousness" component={Unconsciousness} />
+        <Stack.Screen name="profile" component={profile}/>
+        <Stack.Screen name="Details" component={Details}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

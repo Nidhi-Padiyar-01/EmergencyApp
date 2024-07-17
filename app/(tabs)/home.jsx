@@ -8,7 +8,7 @@ const index = () => {
     if (isAvailable) {
       try {
         const  result  = await SMS.sendSMSAsync(
-          ['8310669294','9353984110','8296259270'],
+          ['8310669294','6363105736','8296259270'],
           'Hello! I am in an emergency situation' 
         );
         Alert.alert('Sent', "Message sent succcessfully");

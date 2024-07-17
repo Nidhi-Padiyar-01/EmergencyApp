@@ -18,7 +18,7 @@ const Welcome = () => {
       <ScrollView
         contentContainerStyle={{
           height: "100%",
-          backgroundColor:"#fff",
+          backgroundColor: "#fff",
         }}
       >
         <View className="w-full flex justify-center items-center h-full px-4">
@@ -26,7 +26,7 @@ const Welcome = () => {
             source={images.logo}
             className="w-[150px] h-[100px]"
             resizeMode="contain"
-          /> 
+          />
 
           <Image
             source={images.ambulance}
@@ -38,7 +38,7 @@ const Welcome = () => {
             <Text className="text-3xl text-black font-bold text-center">
               Discover Endless{"\n"}
               Possibilities with{" "}
-              <Text className="text-secondary-200">RescueMe</Text>
+              <Text className="text-secondary-200">aora</Text>
             </Text>
 
             <Image
